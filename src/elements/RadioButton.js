@@ -3,6 +3,9 @@ import styled from "styled-components";
 // class="form-group"
 export const ScRbContainer = styled.div`
     margin: 200px;
+    &:hover span::after {
+        transform: scale(3.6);
+    }
 `;
 
 // class="form__radio-group"
@@ -26,6 +29,8 @@ export const ScRbInput = styled.input`
     display: none;
     &:checked ~ ${ScRbLabel} ${ScRbSpan}::after {
         opacity: 1;
+        transform: scale(1);
+        transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
     }
 `;
 
@@ -42,16 +47,20 @@ export const ScRbSpan = styled.span`
 
     &::after {
         content: "";
-        display: block;
+        position: absolute;
+        top: 18%;
+        left: 18%;
         height: 13px;
         width: 13px;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        border-radius: 100%;
         background-color: #225cff;
-        opacity: 0;
-        transition: opacity 0.2s;
+        display: block;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s ease;
+        /* on hover it gives slight highlight to the blue dot */
+        opacity: 0.08;
+        pointer-events: none;
+        /* transition time for blue dot disappear */
+        transition: opacity 0.1s;
     }
 `;
