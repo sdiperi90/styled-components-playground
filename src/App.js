@@ -2,7 +2,17 @@ import React, { Component } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { fadeIn } from "./animations/header-animation";
 import { getTheme } from "./themes";
-import { ScH1, MainHeader, ScGrid, ScGridCol } from "./elements";
+import {
+    ScH1,
+    MainHeader,
+    ScGrid,
+    ScGridCol,
+    ScRbContainer,
+    ScRbSubContainer,
+    ScRbLabel,
+    ScRbInput,
+    ScRbSpan
+} from "./elements";
 
 const ScApp = styled.div`
     background-color: ${props => props.theme.colors.buy.primary};
@@ -21,17 +31,22 @@ class App extends Component {
     render() {
         return (
             <ThemeProvider theme={getTheme()}>
-                <ScGrid>
-                    <ScGridCol row="1/2" column="1/2">
-                        a
-                    </ScGridCol>
-                    <ScGridCol row="2/3" column="1/2">
-                        b
-                    </ScGridCol>
-                    <ScGridCol row="3/4" column="1/2">
-                        c
-                    </ScGridCol>
-                </ScGrid>
+                <ScRbContainer>
+                    <ScRbSubContainer>
+                        <ScRbInput type="radio" id="small" name="size" />
+                        <ScRbLabel for="small">
+                            <ScRbSpan />
+                            Small Tour Group
+                        </ScRbLabel>
+                    </ScRbSubContainer>
+                    <ScRbSubContainer>
+                        <ScRbInput type="radio" id="large" name="size" />
+                        <ScRbLabel for="large">
+                            <ScRbSpan />
+                            Large Tour Group
+                        </ScRbLabel>
+                    </ScRbSubContainer>
+                </ScRbContainer>
             </ThemeProvider>
         );
     }
