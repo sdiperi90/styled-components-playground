@@ -40,10 +40,7 @@ class App extends Component {
                 <ThemeProvider theme={getTheme()}>
                     <ScTextFieldForm>
                         <ScSubContainer>
-                            <ScTextFieldInput
-                                type="password"
-                                required="required"
-                            />
+                            <ScTextFieldInput type="text" required="required" />
                             <ScTextFieldSpan />
                             <ScTextFieldLabel>Password</ScTextFieldLabel>
                         </ScSubContainer>

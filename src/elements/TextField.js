@@ -12,7 +12,7 @@ export const ScSubContainer = styled.div`
 
 export const ScTextFieldInput = styled.input`
     background: none;
-    color: #999;
+    color: black;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -21,7 +21,7 @@ export const ScTextFieldInput = styled.input`
     border-radius: 0;
     border-bottom: 1px solid #999;
     box-sizing: border-box;
-    letter-spacing: 0.3em;
+
     &:focus {
         outline: none;
     }
