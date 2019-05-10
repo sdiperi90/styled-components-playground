@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import { fadeIn } from "./animations/header-animation";
 import { getTheme } from "./themes";
@@ -11,7 +12,12 @@ import {
     ScRbSubContainer,
     ScRbLabel,
     ScRbInput,
-    ScRbSpan
+    ScRbSpan,
+    ScTextFieldForm,
+    ScTextFieldInput,
+    ScTextFieldLabel,
+    ScSubContainer,
+    ScTextFieldSpan
 } from "./elements";
 
 const ScApp = styled.div`
@@ -30,24 +36,20 @@ const ScAppH1 = styled(ScH1)`
 class App extends Component {
     render() {
         return (
-            <ThemeProvider theme={getTheme()}>
-                <ScRbContainer>
-                    <ScRbSubContainer>
-                        <ScRbInput type="radio" id="small" name="size" />
-                        <ScRbLabel for="small">
-                            <ScRbSpan />
-                            Small Tour Group
-                        </ScRbLabel>
-                    </ScRbSubContainer>
-                    <ScRbSubContainer>
-                        <ScRbInput type="radio" id="large" name="size" />
-                        <ScRbLabel for="large">
-                            <ScRbSpan />
-                            Large Tour Group
-                        </ScRbLabel>
-                    </ScRbSubContainer>
-                </ScRbContainer>
-            </ThemeProvider>
+            <div>
+                <ThemeProvider theme={getTheme()}>
+                    <ScTextFieldForm>
+                        <ScSubContainer>
+                            <ScTextFieldInput
+                                type="password"
+                                required="required"
+                            />
+                            <ScTextFieldSpan />
+                            <ScTextFieldLabel>Password</ScTextFieldLabel>
+                        </ScSubContainer>
+                    </ScTextFieldForm>
+                </ThemeProvider>
+            </div>
         );
     }
 }

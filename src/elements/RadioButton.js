@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 // class="form-group"
 export const ScRbContainer = styled.div`
-    margin: 200px;
+    margin: 100px;
     &:hover span::after {
         transform: scale(3.6);
     }
