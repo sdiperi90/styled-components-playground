@@ -19,6 +19,7 @@ import {
     ScSubContainer,
     ScTextFieldSpan
 } from "./elements";
+import TextField2 from "./elements/TextField2";
 
 const ScApp = styled.div`
     background-color: ${props => props.theme.colors.buy.primary};
@@ -46,6 +47,7 @@ class App extends Component {
                         </ScSubContainer>
                     </ScTextFieldForm>
                 </ThemeProvider>
+                <TextField2 error={""} />
             </div>
         );
     }
