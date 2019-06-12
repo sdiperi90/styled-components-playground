@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import { fadeIn } from "./animations/header-animation";
 import { getTheme } from "./themes";
+import "./CSS/styles.css";
 import {
     ScH1,
     MainHeader,
@@ -17,9 +18,12 @@ import {
     ScTextFieldInput,
     ScTextFieldLabel,
     ScSubContainer,
-    ScTextFieldSpan
+    ScTextFieldSpan,
+    GridLayout
 } from "./elements";
 import TextField2 from "./elements/TextField2";
+import DropdownMenu from "./elements/DropdownMenu";
+import DropdownMenu2 from "./elements/DropdownMenu2";
 
 const ScApp = styled.div`
     background-color: ${props => props.theme.colors.buy.primary};
@@ -38,7 +42,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <ThemeProvider theme={getTheme()}>
+                {/* <ThemeProvider theme={getTheme()}>
                     <ScTextFieldForm>
                         <ScSubContainer>
                             <ScTextFieldInput type="text" required="required" />
@@ -48,6 +52,9 @@ class App extends Component {
                     </ScTextFieldForm>
                 </ThemeProvider>
                 <TextField2 error={""} />
+                <DropdownMenu />
+                <DropdownMenu2 /> */}
+                <GridLayout />
             </div>
         );
     }

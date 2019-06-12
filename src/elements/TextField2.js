@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-export const ScTextFieldForm = styled.form`
-    width: 320px;
-    margin: 45px auto;
-`;
+// export const ScTextFieldForm = styled.form`
+//     width: 320px;
+//     margin: 45px auto;
+// `;
 
 export const ScSubContainer = styled.div`
     position: relative;
@@ -51,39 +51,22 @@ export const ScTextFieldLabel = styled.label`
     transition: 300ms ease all;
 `;
 
-// export const ScTextFieldSpan = styled.span`
-//     position: relative;
-//     display: block;
-//     width: 320px;
-//     &:before {
-//         content: "";
-//         height: 2px;
-//         width: 0;
-//         bottom: 0px;
-//         position: absolute;
-//         background: #2196f3;
-//         transition: 300ms ease all;
-//         left: 0%;
-//     }
-// `;
-
 class TextField2 extends Component {
     render() {
         return (
             <div>
-                <ScTextFieldForm>
-                    <ScSubContainer>
-                        <ScTextFieldInput
-                            error={this.props.error}
-                            type="text"
-                            required="required"
-                        />
-                        {/* <ScTextFieldSpan /> */}
-                        <ScTextFieldLabel error={this.props.error}>
-                            Password
-                        </ScTextFieldLabel>
-                    </ScSubContainer>
-                </ScTextFieldForm>
+                {/* <ScTextFieldForm> */}
+                <ScSubContainer>
+                    <ScTextFieldInput
+                        error={this.props.error}
+                        type="text"
+                        required="required"
+                    />
+                    <ScTextFieldLabel error={this.props.error}>
+                        Password
+                    </ScTextFieldLabel>
+                </ScSubContainer>
+                {/* </ScTextFieldForm> */}
             </div>
         );
     }
