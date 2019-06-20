@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { fadeIn } from "./animations/header-animation";
 import { getTheme } from "./themes";
 import "./CSS/styles.css";
+import "./CSS/styles.scss";
 import {
     ScH1,
     MainHeader,
@@ -19,7 +20,12 @@ import {
     ScTextFieldLabel,
     ScSubContainer,
     ScTextFieldSpan,
-    GridLayout
+    GridLayout,
+    ScSelectDropdown,
+    ScMultipleSelect,
+    ScSingleSelect,
+    ScDropdownButton,
+    ScDropdown
 } from "./elements";
 import TextField2 from "./elements/TextField2";
 import DropdownMenu from "./elements/DropdownMenu";
@@ -54,7 +60,56 @@ class App extends Component {
                 <TextField2 error={""} />
                 <DropdownMenu />
                 <DropdownMenu2 /> */}
-                <GridLayout />
+                {/* <GridLayout /> */}
+
+                {/* <ScSelectDropdown label={"x"} style={{ overflowY: "scroll" }}>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </ScSelectDropdown> */}
+
+                {/* <ScMultipleSelect /> */}
+                {/* <ScSingleSelect label={"test label"}> */}
+                {/* <option>1</option>
+                    <option>1</option>
+                    <option>1</option>
+                    <option>1</option>
+                    <option>1</option>
+                    <option>1</option> */}
+                {/* </ScSingleSelect> */}
+
+                <div>
+                    <ScDropdown
+                        label="React Select"
+                        placeholder="Pick one"
+                        options={[
+                            { value: "Rock" },
+                            { value: "Paper" },
+                            { value: "Scissors" }
+                        ]}
+                    />
+                    <span style={{ display: "inline-block", width: 20 }} />
+                    <ScDropdown
+                        label="React Multiple Select"
+                        placeholder="Pick some"
+                        options={[
+                            { value: "Rock" },
+                            { value: "Paper" },
+                            { value: "Scissors" }
+                        ]}
+                        multiple
+                    />
+                    <span style={{ display: "inline-block", width: 20 }} />
+                </div>
             </div>
         );
     }
