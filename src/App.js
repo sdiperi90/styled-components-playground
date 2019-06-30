@@ -25,7 +25,11 @@ import {
     ScMultipleSelect,
     ScSingleSelect,
     ScDropdownButton,
-    ScDropdown
+    ScDropdown,
+    ScModal,
+    ScCurrencyInput,
+    FileInput,
+    MyFileInput
 } from "./elements";
 import TextField2 from "./elements/TextField2";
 import DropdownMenu from "./elements/DropdownMenu";
@@ -86,30 +90,13 @@ class App extends Component {
                     <option>1</option>
                     <option>1</option> */}
                 {/* </ScSingleSelect> */}
-
-                <div>
-                    <ScDropdown
-                        label="React Select"
-                        placeholder="Pick one"
-                        options={[
-                            { value: "Rock" },
-                            { value: "Paper" },
-                            { value: "Scissors" }
-                        ]}
-                    />
-                    <span style={{ display: "inline-block", width: 20 }} />
-                    <ScDropdown
-                        label="React Multiple Select"
-                        placeholder="Pick some"
-                        options={[
-                            { value: "Rock" },
-                            { value: "Paper" },
-                            { value: "Scissors" }
-                        ]}
-                        multiple
-                    />
-                    <span style={{ display: "inline-block", width: 20 }} />
-                </div>
+                {/* 
+                <ScModal>
+                    <h1>Modal</h1>
+                </ScModal> */}
+                {/* <FileInput /> */}
+                <MyFileInput />
+                {/* <ScCurrencyInput /> */}
             </div>
         );
     }

@@ -8,3 +8,7 @@ export * from "./ScSelectDropdown";
 export * from "./ScMultipleSelect";
 export * from "./ScSingleSelect";
 export * from "./ScDropdown";
+export * from "./ScModal";
+export * from "./FileInput";
+export * from "./ScCurrencyInput";
+export * from "./MyFileInput";
