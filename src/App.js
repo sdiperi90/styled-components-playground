@@ -29,7 +29,11 @@ import {
     ScModal,
     ScCurrencyInput,
     FileInput,
-    MyFileInput
+    MyFileInput,
+    ScLoading,
+    ScLoader2,
+    DropdownNavBar,
+    ScTrash
 } from "./elements";
 import TextField2 from "./elements/TextField2";
 import DropdownMenu from "./elements/DropdownMenu";
@@ -95,8 +99,12 @@ class App extends Component {
                     <h1>Modal</h1>
                 </ScModal> */}
                 {/* <FileInput /> */}
-                <MyFileInput />
+                {/* <MyFileInput /> */}
                 {/* <ScCurrencyInput /> */}
+                {/* <ScLoading />
+                <ScLoader2 /> */}
+                {/* <DropdownNavBar /> */}
+                <ScTrash size={"large"} />
             </div>
         );
     }

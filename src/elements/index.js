@@ -12,3 +12,7 @@ export * from "./ScModal";
 export * from "./FileInput";
 export * from "./ScCurrencyInput";
 export * from "./MyFileInput";
+export * from "./ScLoading";
+export * from "./ScLoader2";
+export * from "./DropdownNavBar";
+export * from "./ScTrash";
